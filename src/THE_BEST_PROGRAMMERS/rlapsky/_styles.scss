@@ -1,3 +1,6 @@
+body{
+    // background-image: url("./THE_BEST_PROGRAMMERS/rlapsky/images/city.jpg");
+}
 .today {
     text-align: center;
     margin: 45px auto 31px auto;
@@ -283,7 +286,6 @@
 
     .today__max {
         padding-left: 20px;
-        
     }
 
     .today__max__text {
@@ -344,6 +346,9 @@
         padding: 60px 0px 90px 110px;
         border-radius: 0px 34px 0px 0px;
     }
+    .weather-toggle {
+        justify-content: flex-end;
+    }
     .today-list__number{
         text-align: left;
         margin: 0px;
@@ -351,8 +356,6 @@
 
     .today-list__box {
         display: flex;
-    }
-    .today-list__item {
     }
     .today-list__dayOfWeek {
         width: auto;
@@ -369,7 +372,6 @@
     .today-list__sunset {
     margin-top: 10px;
     }
-
     .quotes {
         position: absolute;
         right: 110px;

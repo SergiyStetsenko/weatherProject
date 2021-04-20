@@ -23,7 +23,7 @@
 }
 
 .weather-list {
-  min-width: 240px;
+  min-width: 410px;
   display: flex;
   justify-content: center;
 }
@@ -131,16 +131,11 @@
     margin-left: 10px;
   }
 
-  .weather-list {
-    margin-right: -10px;
-    margin-left: -10px;
-  }
-
   .weather-title {
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
-    top: -40px;
+    top: 0px;
   }
 
   .days_list_item {
@@ -194,11 +189,6 @@
   .days_list_item {
     margin-right: 30px;
     margin-left: 30px;
-  }
-
-  .weather-list {
-    margin-right: -30px;
-    margin-left: -30px;
   }
 
   .days_list_item {

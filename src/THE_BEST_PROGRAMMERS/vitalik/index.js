@@ -21,13 +21,26 @@ function rendChart(data) {
     const humidity = [];
     const windSpeed = [];
     const pressure = [];
+    const month = [];
+    const daily = [];
+    const year = [];
+    const y = [];
     grafikTemperature.forEach(element => {
         temp.push(element.main.temp);
         humidity.push((element.main.humidity));
         pressure.push((element.main.pressure));
-       windSpeed.push(element.wind.speed)
+        windSpeed.push(element.wind.speed);
+        const dataGrafik = element.dt.split(' ')
+        
+        month.push(dataGrafik[1])
+        daily.push(dataGrafik[2]);
+        year.push(dataGrafik[3])
     });
-    
+  for (let i = 0; i < 5; i++) {
+   y.push(month[i]+' '+daily[i]+', '+year[i])
+      
+  }
+    console.log(y);
   
     // const Temperature = data[0,7]
     // console.log(Temperature);
@@ -35,17 +48,17 @@ function rendChart(data) {
     
     
     const buttonChart = document.querySelector('.charts-open');
-    buttonChart.innerHTML = `<div>
-    <p><button class="button-chart-close">Hide Chart<svg width="28px" height="28px">
-                <use href="./sprite.svg#icon-arrow_to_up"></use>
-            </svg></button></p>
+    buttonChart.innerHTML = `<div class="chart-position">
+   <button class="button-chart-close">Hide Chart<svg class="chart-svg" width="28px" height="28px">
+                <use href="./sprite.svg#icon-arrow_to_up" width="15px" height="15px"></use>
+            </svg></button>
 </div>`;
     Chart.defaults.font.size = 14;
-const arr = ['16.04','17.04','18.04','19.04','20.04']
+// const arr = ['22.04','23.04','24.04','25.04','26.04']
 new Chart(document.getElementById("charts-line"), {
     type: 'line',
     data: {
-        labels: [...arr],
+        labels: [...y],
         datasets: [{
             
             data: [...temp],
