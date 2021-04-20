@@ -13,7 +13,9 @@
 }
 
 .container_off {
-    max-width: unset!important;
-    margin: 0!important;
-    padding: 0!important;
+    @media (min-width: $desktop) {
+        max-width: unset!important;
+        margin: 0!important;
+        padding: 0!important;
+    }
 }
