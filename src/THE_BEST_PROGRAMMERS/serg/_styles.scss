@@ -7,6 +7,7 @@
 .weather-moreInfo {
   min-width: 1056px;
   display: flex;
+  transform: translateX(-30px);
   justify-content: center;
 
   @media (min-width: $mobile) {
@@ -143,6 +144,7 @@
     top: 580px;
     left: 561px;
     position: absolute;
+
     .container {
       max-width: $tablet;
       padding: 0 74px 0 74px;
