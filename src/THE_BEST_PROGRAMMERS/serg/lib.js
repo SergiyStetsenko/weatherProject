@@ -6,7 +6,17 @@ const rendMore = function (dayData) {
     button.innerHTML = `<button class="ewcw"><svg class="button_svg" width="17" height="18">
     <use href = "./sprite.svg#icon-arrow_to_right" ></use></svg></button>`
     const more = document.querySelector('.weather-moreInfo')
-    const opop = dayData.splice(1,1)
+    if(dayData.length > 7) {
+        const opop = dayData.splice(1,1)
+        more.classList.add('with-jc');
+        more.classList.remove('without-jc');
+    }else {
+        const opop = dayData;
+        more.classList.add('without-jc');
+        more.classList.remove('with-jc');
+    }
+    
+    console.log(dayData);
     const pepo = dayData.splice(7)
      
     const ret = dayData.map(e => {
@@ -25,3 +35,10 @@ const rendMore = function (dayData) {
 }
 export { rendMore }
 
+
+// const cnon = getElementById('data-id="0"')
+//     console.log(cnon);
+// const button = document.querySelector('.btn');
+
+// button.style.backgroundColor = 'teal';
+// console.log(button.style);
