@@ -7,6 +7,11 @@
 
 .fivedays {
   margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.weather {
+  margin-bottom: 20px;
 }
 
 .fiveDaysScrollLeft {
@@ -159,7 +164,6 @@
     justify-content: center;
   }
 }
-
 
 @media (min-width: $tablet) {
   .fivedays {
