@@ -1,7 +1,6 @@
 import galeru from './galery.hbs';
 import funSlid from'../illia/slider.js';
 
-
 const rendMore = function (dayData) {
     const button = document.querySelector('.weather-moreInfo-slider')
     
